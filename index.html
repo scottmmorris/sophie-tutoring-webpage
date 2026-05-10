@@ -1,13 +1,1078 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>Sophie's tutoring</title>
+  <meta charset="UTF-8" />
+  <title>Sophie Ren Tutoring | Online Biology & Science Tutor</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Online Biology and Science tutoring for IGCSE, GCSE, A Level Biology and KS3 Science with experienced teacher Sophie Ren." />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --green-primary: #4caf50;
+      --green-dark: #2e7d32;
+      --sage-light: #e6f2e6;
+      --bg-cream: #fafaf7;
+      --text-main: #333333;
+      --text-muted: #666666;
+      --border-soft: #d8e6d8;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Lato", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text-main);
+      background-color: var(--bg-cream);
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    /* Layout */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: var(--white);
+      border-bottom: 1px solid var(--border-soft);
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.75rem 0;
+    }
+
+    .logo-text {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .logo-box {
+      width: 40px;
+      height: 40px;
+      border-radius: 6px;
+      background: linear-gradient(135deg, var(--green-primary), var(--green-dark));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--white);
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+
+    .logo-title {
+      font-family: "Montserrat", sans-serif;
+      font-weight: 700;
+      font-size: 1.05rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--green-dark);
+    }
+
+    .logo-subtitle {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--text-muted);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.25rem;
+      align-items: center;
+      font-size: 0.95rem;
+    }
+
+    .nav-links a {
+      position: relative;
+      padding-bottom: 0.15rem;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 2px;
+      background: var(--green-primary);
+      transition: width 0.2s ease;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .nav-cta {
+      padding: 0.4rem 0.9rem;
+      border-radius: 999px;
+      border: 1px solid var(--green-primary);
+      color: var(--green-dark);
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    /* Mobile nav */
+
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    .nav-toggle span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--text-main);
+      margin: 4px 0;
+      transition: 0.3s;
+    }
+
+    .nav-links-mobile {
+      display: none;
+      flex-direction: column;
+      gap: 0.75rem;
+      padding: 0.75rem 0 1rem;
+      border-top: 1px solid var(--border-soft);
+      font-size: 0.95rem;
+    }
+
+    .nav-links-mobile a {
+      padding: 0.25rem 0;
+    }
+
+    /* Hero */
+
+    .hero {
+      padding: 3.5rem 0 3rem;
+      background: var(--bg-cream);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    .hero-kicker {
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-size: 0.75rem;
+      color: var(--green-dark);
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+
+    .hero-title {
+      font-family: "Montserrat", sans-serif;
+      font-size: 2.2rem;
+      line-height: 1.2;
+      margin-bottom: 0.75rem;
+      color: var(--text-main);
+    }
+
+    .hero-highlight {
+      color: var(--green-dark);
+    }
+
+    .hero-subtitle {
+      font-size: 1rem;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .btn-primary {
+      background: var(--green-primary);
+      color: var(--white);
+      border-radius: 999px;
+      padding: 0.7rem 1.4rem;
+      font-size: 0.95rem;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .btn-secondary {
+      background: var(--white);
+      color: var(--green-dark);
+      border-radius: 999px;
+      padding: 0.7rem 1.4rem;
+      font-size: 0.95rem;
+      font-weight: 600;
+      border: 1px solid var(--green-primary);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .hero-meta {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .hero-meta span {
+      font-weight: 600;
+      color: var(--green-dark);
+    }
+
+    .hero-card {
+      background: var(--white);
+      border-radius: 14px;
+      padding: 1.5rem;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+      border: 1px solid var(--border-soft);
+    }
+
+    .hero-card-title {
+      font-family: "Montserrat", sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+      color: var(--green-dark);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    .hero-card-list {
+      list-style: none;
+      font-size: 0.9rem;
+      color: var(--text-main);
+    }
+
+    .hero-card-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .hero-card-badge {
+      display: inline-block;
+      margin-top: 0.75rem;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--text-muted);
+    }
+
+    /* Sections */
+
+    section {
+      padding: 3rem 0;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .section-kicker {
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-size: 0.75rem;
+      color: var(--green-dark);
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+    }
+
+    .section-title {
+      font-family: "Montserrat", sans-serif;
+      font-size: 1.6rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .section-subtitle {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      max-width: 540px;
+      margin: 0.25rem auto 0;
+    }
+
+    /* About */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 2rem;
+      align-items: flex-start;
+    }
+
+    .about-card {
+      background: var(--white);
+      border-radius: 12px;
+      padding: 1.5rem;
+      border: 1px solid var(--border-soft);
+    }
+
+    .about-card h3 {
+      font-family: "Montserrat", sans-serif;
+      font-size: 1.05rem;
+      margin-bottom: 0.75rem;
+      color: var(--green-dark);
+    }
+
+    .about-card ul {
+      list-style: none;
+      font-size: 0.9rem;
+      color: var(--text-main);
+    }
+
+    .about-card li {
+      margin-bottom: 0.4rem;
+    }
+
+    /* Courses */
+
+    .courses-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 1.25rem;
+    }
+
+    .course-card {
+      background: var(--white);
+      border-radius: 12px;
+      padding: 1.25rem;
+      border: 1px solid var(--border-soft);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .course-tag {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--text-muted);
+      margin-bottom: 0.4rem;
+    }
+
+    .course-title {
+      font-family: "Montserrat", sans-serif;
+      font-size: 1rem;
+      margin-bottom: 0.4rem;
+      color: var(--green-dark);
+    }
+
+    .course-body {
+      font-size: 0.9rem;
+      color: var(--text-main);
+      margin-bottom: 0.75rem;
+    }
+
+    .course-footer {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    /* Testimonials */
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.25rem;
+    }
+
+    .testimonial-card {
+      background: var(--white);
+      border-radius: 12px;
+      padding: 1.25rem;
+      border: 1px solid var(--border-soft);
+      font-size: 0.9rem;
+      position: relative;
+    }
+
+    .testimonial-quote {
+      font-size: 2rem;
+      color: var(--green-primary);
+      position: absolute;
+      top: 0.4rem;
+      left: 0.7rem;
+      opacity: 0.2;
+    }
+
+    .testimonial-text {
+      margin-top: 0.5rem;
+      color: var(--text-main);
+    }
+
+    .testimonial-name {
+      margin-top: 0.75rem;
+      font-weight: 600;
+      font-size: 0.85rem;
+      color: var(--green-dark);
+    }
+
+    .testimonial-meta {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    /* Online tutoring */
+
+    .online-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.25rem;
+    }
+
+    .online-card {
+      background: var(--white);
+      border-radius: 12px;
+      padding: 1.25rem;
+      border: 1px solid var(--border-soft);
+      font-size: 0.9rem;
+    }
+
+    .online-card h3 {
+      font-family: "Montserrat", sans-serif;
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+      color: var(--green-dark);
+    }
+
+    .online-card ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .online-card li {
+      margin-bottom: 0.35rem;
+    }
+
+    /* Rates */
+
+    .rates-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+      gap: 2rem;
+      align-items: flex-start;
+    }
+
+    .rates-card {
+      background: var(--white);
+      border-radius: 12px;
+      padding: 1.5rem;
+      border: 1px solid var(--border-soft);
+      font-size: 0.9rem;
+    }
+
+    .rates-card h3 {
+      font-family: "Montserrat", sans-serif;
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+      color: var(--green-dark);
+    }
+
+    .rates-card ul {
+      list-style: none;
+    }
+
+    .rates-card li {
+      margin-bottom: 0.35rem;
+    }
+
+    .rates-note {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-top: 0.75rem;
+    }
+
+    /* Contact */
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+      gap: 2rem;
+      align-items: flex-start;
+    }
+
+    .contact-details {
+      font-size: 0.95rem;
+    }
+
+    .contact-details p {
+      margin-bottom: 0.5rem;
+    }
+
+    .contact-details strong {
+      color: var(--green-dark);
+    }
+
+    form {
+      background: var(--white);
+      border-radius: 12px;
+      padding: 1.5rem;
+      border: 1px solid var(--border-soft);
+      font-size: 0.9rem;
+    }
+
+    .form-row {
+      margin-bottom: 0.9rem;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.25rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-main);
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 0.55rem 0.6rem;
+      border-radius: 8px;
+      border: 1px solid var(--border-soft);
+      font-family: inherit;
+      font-size: 0.9rem;
+      outline: none;
+      background: #fcfcfb;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color: var(--green-primary);
+      box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.12);
+      background: var(--white);
+    }
+
+    textarea {
+      min-height: 110px;
+      resize: vertical;
+    }
+
+    .form-helper {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 0.25rem;
+    }
+
+    /* Footer */
+
+    footer {
+      padding: 1.5rem 0 2rem;
+      border-top: 1px solid var(--border-soft);
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      background: var(--white);
+      margin-top: 2rem;
+    }
+
+    .footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 0.75rem;
+      align-items: center;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 1rem;
+    }
+
+    /* Responsive */
+
+    @media (max-width: 900px) {
+      .hero-grid,
+      .about-grid,
+      .courses-grid,
+      .testimonials-grid,
+      .online-grid,
+      .rates-grid,
+      .contact-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .courses-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .testimonials-grid,
+      .online-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 700px) {
+      .nav-links {
+        display: none;
+      }
+
+      .nav-toggle {
+        display: block;
+      }
+
+      .hero {
+        padding-top: 2.5rem;
+      }
+
+      .hero-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .hero-title {
+        font-size: 1.8rem;
+      }
+
+      .courses-grid,
+      .testimonials-grid,
+      .online-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      section {
+        padding: 2.5rem 0;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .btn-primary,
+      .btn-secondary {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  </style>
 </head>
 <body>
-<h1>Enter the main heading, usually the same as the title.</h1>
-<p>Be <b>bold</b> in stating your key points. Put them in a list: </p>
-<ul>
-<li>The first item in your list</li>
-<li>The second item; <i>italicize</i> key words</li>
-</ul>
+
+  <!-- Header / Navigation -->
+  <header>
+    <div class="container">
+      <nav class="nav">
+        <div class="logo-text">
+          <div class="logo-box">SR</div>
+          <div>
+            <div class="logo-title">Sophie Ren Tutoring</div>
+            <div class="logo-subtitle">HSC · GCSE · A‑Level · Online</div>
+          </div>
+        </div>
+
+        <button class="nav-toggle" aria-label="Toggle navigation" onclick="toggleNav()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div class="nav-links">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#courses">Courses</a>
+          <a href="#testimonials">Testimonials</a>
+          <a href="#online">Online Tutoring</a>
+          <a href="#rates">Rates</a>
+          <a href="#contact" class="nav-cta">Contact</a>
+        </div>
+      </nav>
+
+      <div id="mobileNav" class="nav-links-mobile">
+        <a href="#home" onclick="toggleNav()">Home</a>
+        <a href="#about" onclick="toggleNav()">About</a>
+        <a href="#courses" onclick="toggleNav()">Courses</a>
+        <a href="#testimonials" onclick="toggleNav()">Testimonials</a>
+        <a href="#online" onclick="toggleNav()">Online Tutoring</a>
+        <a href="#rates" onclick="toggleNav()">Rates</a>
+        <a href="#contact" onclick="toggleNav()">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main id="home">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="hero-kicker">Online Biology & Science Tuition</div>
+          <h1 class="hero-title">
+            Expert tutoring for <span class="hero-highlight">IGCSE, GCSE, A Level Biology</span> & KS3 Science.
+          </h1>
+          <p class="hero-subtitle">
+            Personalised, online lessons with an experienced teacher who has taught in leading independent schools in both Sydney and London.
+          </p>
+          <div class="hero-buttons">
+            <a href="#contact" class="btn-primary">Enquire about availability</a>
+            <a href="#courses" class="btn-secondary">View courses</a>
+          </div>
+          <p class="hero-meta">
+            Sessions are <span>online</span> · Individual & small group · Group discounts available
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">About</div>
+          <h2 class="section-title">Meet Sophie Ren</h2>
+          <p class="section-subtitle">
+            An experienced science educator with a passion for helping students build confidence, curiosity, and strong exam results.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <div>
+            <p>
+              I am an experienced science teacher who has worked in leading independent schools in both
+              <strong>Sydney</strong> and <strong>London</strong>. I specialise in teaching
+              <strong>IGCSE Biology</strong>, <strong>GCSE Biology</strong>, <strong>A Level Biology</strong>,
+              and <strong>KS3 Science</strong>, and have also taught the Australian <strong>HSC Biology</strong> curriculum.
+            </p>
+            <br />
+            <p>
+              I graduated from the <strong>University of New South Wales (UNSW)</strong> with a
+              <strong>Bachelor of Secondary Education & Science (Biology major) with Distinction</strong>.
+              My teaching is grounded in clear explanations, structured practice, and evidence‑based learning strategies.
+            </p>
+            <br />
+            <p>
+              I previously worked with <strong>Arludo</strong>, a science outreach company, designing curriculum that
+              integrates <strong>game‑based STEM learning</strong> to enrich student engagement in science and biology.
+              This experience has shaped my approach to make lessons interactive, relevant, and enjoyable.
+            </p>
+          </div>
+
+          <div class="about-card">
+            <h3>What students can expect</h3>
+            <ul>
+              <li>• Clear, step‑by‑step explanations of challenging concepts</li>
+              <li>• Exam‑focused strategies and past paper practice</li>
+              <li>• Personalised support tailored to each student’s goals</li>
+              <li>• A calm, encouraging environment that builds confidence</li>
+              <li>• Online lessons designed to be interactive and engaging</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Courses -->
+    <section id="courses">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">Courses</div>
+          <h2 class="section-title">What I Teach</h2>
+          <p class="section-subtitle">
+            Specialised online tutoring in Biology and Science across key international curricula.
+          </p>
+        </div>
+
+        <div class="courses-grid">
+          <article class="course-card">
+            <div>
+              <div class="course-tag">Cambridge / Edexcel</div>
+              <h3 class="course-title">IGCSE Biology</h3>
+              <p class="course-body">
+                Structured coverage of core and extended content, practical skills, and exam technique with targeted past‑paper practice.
+              </p>
+            </div>
+            <div class="course-footer">
+              Ideal for Years 9–11 students preparing for IGCSE Biology exams.
+            </div>
+          </article>
+
+          <article class="course-card">
+            <div>
+              <div class="course-tag">UK GCSE</div>
+              <h3 class="course-title">GCSE Biology</h3>
+              <p class="course-body">
+                Clear explanations, scaffolded revision, and exam‑style questions to build confidence and accuracy in GCSE Biology.
+              </p>
+            </div>
+            <div class="course-footer">
+              Suitable for students following AQA, OCR, Edexcel and similar specifications.
+            </div>
+          </article>
+
+          <article class="course-card">
+            <div>
+              <div class="course-tag">A Level</div>
+              <h3 class="course-title">A Level Biology</h3>
+              <p class="course-body">
+                In‑depth conceptual teaching, data analysis skills, and high‑level exam technique tailored to A Level Biology demands.
+              </p>
+            </div>
+            <div class="course-footer">
+              Ideal for Year 12–13 students aiming for top grades.
+            </div>
+          </article>
+
+          <article class="course-card">
+            <div>
+              <div class="course-tag">KS3 Science</div>
+              <h3 class="course-title">KS3 Science</h3>
+              <p class="course-body">
+                Supportive, foundational science tuition to prepare students for future success in GCSE and beyond.
+              </p>
+            </div>
+            <div class="course-footer">
+              Perfect for building confidence early in secondary school.
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">Testimonials</div>
+          <h2 class="section-title">Student & Parent Feedback</h2>
+          <p class="section-subtitle">
+            A space for you to add real testimonials as they come in. Here are example placeholders you can replace.
+          </p>
+        </div>
+
+        <div class="testimonials-grid">
+          <article class="testimonial-card">
+            <div class="testimonial-quote">“</div>
+            <p class="testimonial-text">
+              Sophie helped me go from a predicted 6 to a 9 in GCSE Biology. Her explanations made everything finally click.
+            </p>
+            <div class="testimonial-name">Year 11 Student</div>
+            <div class="testimonial-meta">GCSE Biology</div>
+          </article>
+
+          <article class="testimonial-card">
+            <div class="testimonial-quote">“</div>
+            <p class="testimonial-text">
+              The best tutor I’ve ever had. She made A Level Biology feel manageable and even enjoyable.
+            </p>
+            <div class="testimonial-name">Year 13 Student</div>
+            <div class="testimonial-meta">A Level Biology</div>
+          </article>
+
+          <article class="testimonial-card">
+            <div class="testimonial-quote">“</div>
+            <p class="testimonial-text">
+              My daughter’s confidence in science has transformed. The online lessons are structured, engaging, and very effective.
+            </p>
+            <div class="testimonial-name">Parent of KS3 Student</div>
+            <div class="testimonial-meta">KS3 Science</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Online Tutoring -->
+    <section id="online">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">Online Tutoring</div>
+          <h2 class="section-title">How Online Lessons Work</h2>
+          <p class="section-subtitle">
+            All tutoring sessions are delivered online, designed to be interactive, flexible, and effective for busy students.
+          </p>
+        </div>
+
+        <div class="online-grid">
+          <article class="online-card">
+            <h3>Lesson Format</h3>
+            <ul>
+              <li>• Live video lessons (e.g. Zoom or Teams)</li>
+              <li>• Digital whiteboard and shared resources</li>
+              <li>• Exam‑style questions and worked solutions</li>
+              <li>• Optional homework and follow‑up tasks</li>
+            </ul>
+          </article>
+
+          <article class="online-card">
+            <h3>Benefits of Online</h3>
+            <ul>
+              <li>• No travel time, learn from home</li>
+              <li>• Flexible scheduling across time zones</li>
+              <li>• Access to digital worksheets and revision materials</li>
+              <li>• Ideal for regular support or intensive revision blocks</li>
+            </ul>
+          </article>
+
+          <article class="online-card">
+            <h3>Group Sessions</h3>
+            <ul>
+              <li>• Small groups (typically 2–4 students)</li>
+              <li>• Group discounts offered</li>
+              <li>• Great for friends in the same course</li>
+              <li>• Shared exam practice and discussion</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Rates -->
+    <section id="rates">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">Rates & Enquiries</div>
+          <h2 class="section-title">Tutoring Rates</h2>
+          <p class="section-subtitle">
+            Rates vary depending on course level, individual vs group sessions, and frequency. Please get in touch for a personalised quote.
+          </p>
+        </div>
+
+        <div class="rates-grid">
+          <div class="rates-card">
+            <h3>What affects the rate?</h3>
+            <ul>
+              <li>• Course level (KS3, IGCSE/GCSE, A Level)</li>
+              <li>• Individual vs small group lessons</li>
+              <li>• Weekly ongoing support vs short‑term revision</li>
+              <li>• Length of each session</li>
+            </ul>
+            <p class="rates-note">
+              Group discounts are available for students in the same course and similar level.
+            </p>
+          </div>
+
+          <div class="rates-card">
+            <h3>How to enquire</h3>
+            <p>
+              To enquire about current rates and availability, please use the contact form below or email:
+              <strong>srentutoring@gmail.com</strong>.
+            </p>
+            <br />
+            <p>
+              Include the student’s year level, course (e.g. IGCSE Biology, A Level Biology), and any exam boards or key dates
+              (e.g. upcoming mocks or final exams).
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">Contact</div>
+          <h2 class="section-title">Get in Touch</h2>
+          <p class="section-subtitle">
+            Ready to enquire about tutoring or ask a question? Fill in the form below and I’ll get back to you as soon as possible.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-details">
+            <p><strong>Name:</strong> Sophie Ren</p>
+            <p><strong>Email:</strong> <a href="mailto:srentutoring@gmail.com">srentutoring@gmail.com</a></p>
+            <p><strong>Location:</strong> Online tutoring (Sydney & London time zones available)</p>
+            <br />
+            <p>
+              Please include the student’s current year level, curriculum (e.g. IGCSE, GCSE, A Level, KS3), and any specific goals
+              (e.g. grade improvement, exam preparation, confidence building).
+            </p>
+          </div>
+
+          <form>
+            <div class="form-row">
+              <label for="name">Student or parent name</label>
+              <input type="text" id="name" name="name" placeholder="Your name" />
+            </div>
+
+            <div class="form-row">
+              <label for="email">Email address</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" />
+            </div>
+
+            <div class="form-row">
+              <label for="course">Course / level</label>
+              <select id="course" name="course">
+                <option value="">Select an option</option>
+                <option>KS3 Science</option>
+                <option>IGCSE Biology</option>
+                <option>GCSE Biology</option>
+                <option>A Level Biology</option>
+                <option>Other / Not sure</option>
+              </select>
+            </div>
+
+            <div class="form-row">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Tell me a little about the student, their goals, and preferred times."></textarea>
+              <div class="form-helper">
+                This form is a front‑end template. Your web host or developer can connect it to email or a form service.
+              </div>
+            </div>
+
+            <button type="submit" class="btn-primary">Send enquiry</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> Sophie Ren Tutoring. All rights reserved.</div>
+      <div class="footer-links">
+        <a href="#home">Back to top</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile nav toggle
+    function toggleNav() {
+      const mobileNav = document.getElementById("mobileNav");
+      if (mobileNav.style.display === "flex") {
+        mobileNav.style.display = "none";
+      } else {
+        mobileNav.style.display = "flex";
+      }
+    }
+
+    // Current year in footer
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
