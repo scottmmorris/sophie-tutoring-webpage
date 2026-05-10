@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>About Sophie Ren | Biology & Science Tutor</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Meet Sophie Ren - An experienced science educator with qualifications from UNSW. Learn about her teaching philosophy and student testimonials." />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+
+  <!-- External Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <script>
+    function toggleNav() {
+      const mobileNav = document.getElementById('mobileNav');
+      mobileNav.style.display = mobileNav.style.display === 'flex' ? 'none' : 'flex';
+    }
+  </script>
+</head>
+<body>
+
+  <!-- Header / Navigation -->
+  <header>
+    <div class="container">
+      <nav class="nav">
+        <div class="logo-text">
+          <a href="index.html" style="display: flex; align-items: center; gap: 0.75rem;">
+            <div class="logo-box">SR</div>
+            <div>
+              <div class="logo-title">Sophie Ren Tutoring</div>
+              <div class="logo-subtitle">HSC · GCSE · A‑Level · Online</div>
+            </div>
+          </a>
+        </div>
+
+        <button class="nav-toggle" aria-label="Toggle navigation" onclick="toggleNav()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="courses.html">Courses</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </nav>
+
+      <div id="mobileNav" class="nav-links-mobile">
+        <a href="index.html" onclick="toggleNav()">Home</a>
+        <a href="about.html" onclick="toggleNav()">About</a>
+        <a href="courses.html" onclick="toggleNav()">Courses</a>
+        <a href="contact.html" onclick="toggleNav()">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- About Section -->
+    <section id="about" style="padding: 3rem 0;">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">About</div>
+          <h1 class="section-title">Meet Sophie Ren</h1>
+          <p class="section-subtitle">
+            An experienced science educator with a passion for helping students build confidence, curiosity, and strong exam results.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <div>
+            <p>
+              I am an experienced science teacher who has worked in leading independent schools in both
+              <strong>Sydney</strong> and <strong>London</strong>. I specialise in teaching
+              <strong>IGCSE Biology</strong>, <strong>GCSE Biology</strong>, <strong>A Level Biology</strong>,
+              and <strong>KS3 Science</strong>, and have also taught the Australian <strong>HSC Biology</strong> curriculum.
+            </p>
+            <br />
+            <p>
+              I graduated from the <strong>University of New South Wales (UNSW)</strong> with a
+              <strong>Bachelor of Secondary Education & Science (Biology major) with Distinction</strong>.
+              My teaching is grounded in clear explanations, structured practice, and evidence‑based learning strategies.
+            </p>
+            <br />
+            <p>
+              I previously worked with <strong>Arludo</strong>, a science outreach company, designing curriculum that
+              integrates <strong>game‑based STEM learning</strong> to enrich student engagement in science and biology.
+              This experience has shaped my approach to make lessons interactive, relevant, and enjoyable.
+            </p>
+          </div>
+
+          <div class="about-card">
+            <h3>What students can expect</h3>
+            <ul>
+              <li>• Clear, step‑by‑step explanations of challenging concepts</li>
+              <li>• Exam‑focused strategies and past paper practice</li>
+              <li>• Personalised support tailored to each student's goals</li>
+              <li>• A calm, encouraging environment that builds confidence</li>
+              <li>• Online lessons designed to be interactive and engaging</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" style="padding: 3rem 0; background: #f9f9f9;">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">Testimonials</div>
+          <h2 class="section-title">Student & Parent Feedback</h2>
+          <p class="section-subtitle">
+            Real feedback from students and parents who have experienced the benefits of personalised tutoring.
+          </p>
+        </div>
+
+        <div class="testimonials-grid">
+          <article class="testimonial-card">
+            <div class="testimonial-quote">"</div>
+            <p class="testimonial-text">
+              Sophie helped me go from a predicted 6 to a 9 in GCSE Biology. Her explanations made everything finally click.
+            </p>
+            <div class="testimonial-name">Year 11 Student</div>
+            <div class="testimonial-meta">GCSE Biology</div>
+          </article>
+
+          <article class="testimonial-card">
+            <div class="testimonial-quote">"</div>
+            <p class="testimonial-text">
+              The best tutor I've ever had. She made A Level Biology feel manageable and even enjoyable.
+            </p>
+            <div class="testimonial-name">Year 13 Student</div>
+            <div class="testimonial-meta">A Level Biology</div>
+          </article>
+
+          <article class="testimonial-card">
+            <div class="testimonial-quote">"</div>
+            <p class="testimonial-text">
+              My daughter's confidence in science has transformed. The online lessons are structured, engaging, and very effective.
+            </p>
+            <div class="testimonial-name">Parent of KS3 Student</div>
+            <div class="testimonial-meta">KS3 Science</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section style="padding: 3rem 0;">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Ready to get started?</h2>
+          <p class="section-subtitle">
+            Explore my courses or contact me to discuss your tutoring needs.
+          </p>
+          <div style="display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; margin-top: 1.5rem;">
+            <a href="courses.html" class="btn-primary">View Courses</a>
+            <a href="contact.html" class="btn-secondary">Get in Touch</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div>© 2026 Sophie Ren Tutoring. All rights reserved.</div>
+        <div class="footer-links">
+          <a href="about.html">About</a>
+          <a href="courses.html">Courses</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
