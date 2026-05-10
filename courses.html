@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Courses | Sophie Ren Tutoring - IGCSE, GCSE, A Level Biology</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Browse Sophie Ren's tutoring courses: IGCSE Biology, GCSE Biology, A Level Biology, and KS3 Science. Learn how online tutoring works." />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+
+  <!-- External Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <script>
+    function toggleNav() {
+      const mobileNav = document.getElementById('mobileNav');
+      mobileNav.style.display = mobileNav.style.display === 'flex' ? 'none' : 'flex';
+    }
+  </script>
+</head>
+<body>
+
+  <!-- Header / Navigation -->
+  <header>
+    <div class="container">
+      <nav class="nav">
+        <div class="logo-text">
+          <a href="index.html" style="display: flex; align-items: center; gap: 0.75rem;">
+            <div class="logo-box">SR</div>
+            <div>
+              <div class="logo-title">Sophie Ren Tutoring</div>
+              <div class="logo-subtitle">HSC · GCSE · A‑Level · Online</div>
+            </div>
+          </a>
+        </div>
+
+        <button class="nav-toggle" aria-label="Toggle navigation" onclick="toggleNav()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="courses.html">Courses</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </nav>
+
+      <div id="mobileNav" class="nav-links-mobile">
+        <a href="index.html" onclick="toggleNav()">Home</a>
+        <a href="about.html" onclick="toggleNav()">About</a>
+        <a href="courses.html" onclick="toggleNav()">Courses</a>
+        <a href="contact.html" onclick="toggleNav()">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Courses Section -->
+    <section id="courses" style="padding: 3rem 0;">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">Courses</div>
+          <h1 class="section-title">What I Teach</h1>
+          <p class="section-subtitle">
+            Specialised online tutoring in Biology and Science across key international curricula.
+          </p>
+        </div>
+
+        <div class="courses-grid">
+          <article class="course-card">
+            <div>
+              <div class="course-tag">Cambridge / Edexcel</div>
+              <h3 class="course-title">IGCSE Biology</h3>
+              <p class="course-body">
+                Structured coverage of core and extended content, practical skills, and exam technique with targeted past‑paper practice.
+              </p>
+            </div>
+            <div class="course-footer">
+              Ideal for Years 9–11 students preparing for IGCSE Biology exams.
+            </div>
+          </article>
+
+          <article class="course-card">
+            <div>
+              <div class="course-tag">UK GCSE</div>
+              <h3 class="course-title">GCSE Biology</h3>
+              <p class="course-body">
+                Clear explanations, scaffolded revision, and exam‑style questions to build confidence and accuracy in GCSE Biology.
+              </p>
+            </div>
+            <div class="course-footer">
+              Suitable for students following AQA, OCR, Edexcel and similar specifications.
+            </div>
+          </article>
+
+          <article class="course-card">
+            <div>
+              <div class="course-tag">A Level</div>
+              <h3 class="course-title">A Level Biology</h3>
+              <p class="course-body">
+                In‑depth conceptual teaching, data analysis skills, and high‑level exam technique tailored to A Level Biology demands.
+              </p>
+            </div>
+            <div class="course-footer">
+              Ideal for Year 12–13 students aiming for top grades.
+            </div>
+          </article>
+
+          <article class="course-card">
+            <div>
+              <div class="course-tag">KS3 Science</div>
+              <h3 class="course-title">KS3 Science</h3>
+              <p class="course-body">
+                Supportive, foundational science tuition to prepare students for future success in GCSE and beyond.
+              </p>
+            </div>
+            <div class="course-footer">
+              Perfect for building confidence early in secondary school.
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Online Tutoring Section -->
+    <section id="online" style="padding: 3rem 0; background: #f9f9f9;">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">Online Tutoring</div>
+          <h2 class="section-title">How Online Lessons Work</h2>
+          <p class="section-subtitle">
+            All tutoring sessions are delivered online, designed to be interactive, flexible, and effective for busy students.
+          </p>
+        </div>
+
+        <div class="online-grid">
+          <article class="online-card">
+            <h3>Lesson Format</h3>
+            <ul>
+              <li>• Live video lessons (e.g. Zoom or Teams)</li>
+              <li>• Digital whiteboard and shared resources</li>
+              <li>• Exam‑style questions and worked solutions</li>
+              <li>• Optional homework and follow‑up tasks</li>
+            </ul>
+          </article>
+
+          <article class="online-card">
+            <h3>Benefits of Online</h3>
+            <ul>
+              <li>• No travel time, learn from home</li>
+              <li>• Flexible scheduling across time zones</li>
+              <li>• Access to digital worksheets and revision materials</li>
+              <li>• Ideal for regular support or intensive revision blocks</li>
+            </ul>
+          </article>
+
+          <article class="online-card">
+            <h3>Group Sessions</h3>
+            <ul>
+              <li>• Small groups (typically 2–4 students)</li>
+              <li>• Group discounts offered</li>
+              <li>• Great for friends in the same course</li>
+              <li>• Shared exam practice and discussion</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section style="padding: 3rem 0;">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Interested in a specific course?</h2>
+          <p class="section-subtitle">
+            Get in touch to enquire about availability and rates for your course.
+          </p>
+          <div style="display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; margin-top: 1.5rem;">
+            <a href="contact.html" class="btn-primary">Contact Me</a>
+            <a href="about.html" class="btn-secondary">Learn More About Me</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div>© 2026 Sophie Ren Tutoring. All rights reserved.</div>
+        <div class="footer-links">
+          <a href="about.html">About</a>
+          <a href="courses.html">Courses</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
