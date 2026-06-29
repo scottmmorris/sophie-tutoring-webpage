@@ -2,156 +2,259 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Sophie Ren Tutoring | Online Biology & Science Tutor</title>
+  <title>Sophie Ren Tutoring</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Online Biology and Science tutoring for IGCSE, GCSE, A Level Biology and KS3 Science with experienced teacher Sophie Ren." />
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="favicon.ico" />
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
-
-  <!-- External Stylesheet -->
+  <!-- Link CSS -->
   <link rel="stylesheet" href="styles.css" />
 
-  <script>
-    function toggleNav() {
-      const mobileNav = document.getElementById('mobileNav');
-      mobileNav.style.display = mobileNav.style.display === 'flex' ? 'none' : 'flex';
+  <style>
+    .hero {
+      background: linear-gradient(135deg, #eef7ee, #f6fbf6);
+      padding: 3rem 0;
     }
-  </script>
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .hero-content-box {
+      background: white;
+      padding: 2rem;
+      border-radius: 18px;
+      box-shadow: 0 12px 25px rgba(0,0,0,0.06);
+    }
+
+    .hero-kicker {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #2e7d32;
+      margin-bottom: 0.5rem;
+    }
+
+    /* ✅ CLEAN IMAGE AREA (no green block) */
+    .hero-images {
+      position: relative;
+      height: 420px;
+      border-radius: 16px;
+      overflow: hidden;
+      background: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 0.8s ease;
+    }
+
+    /* ✅ img1 slightly zoomed (hides Gemini logo naturally) */
+    .img1 {
+      object-fit: cover;
+      transform: scale(1.08);
+      object-position: center;
+    }
+
+    /* ✅ img2 fully visible */
+    .img2 {
+      object-fit: contain;
+    }
+
+    .img3 {
+      object-fit: cover;
+    }
+
+    .hero-img.active {
+      opacity: 1;
+    }
+
+    /* TESTIMONIALS */
+    .testimonials-section {
+      background: #f7fbf7;
+      padding: 3rem 0;
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+    }
+
+    .testimonial-card {
+      background: white;
+      padding: 1.3rem;
+      border-radius: 14px;
+      border: 1px solid #d8e6d8;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    .testimonial-name {
+      margin-top: 0.75rem;
+      font-weight: 600;
+      color: #2e7d32;
+    }
+
+    @media (max-width: 768px) {
+      .hero-grid,
+      .testimonials-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-images {
+        height: 280px;
+        margin-top: 1.5rem;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-  <!-- Header / Navigation -->
-  <header>
-    <div class="container">
-      <nav class="nav">
-        <div class="logo-text">
-          <a href="index.html" style="display: flex; align-items: center; gap: 0.75rem;">
-            <div class="logo-box">SR</div>
-            <div>
-              <div class="logo-title">Sophie Ren Tutoring</div>
-              <div class="logo-subtitle">HSC · GCSE · A‑Level · Online</div>
-            </div>
-          </a>
-        </div>
-
-        <button class="nav-toggle" aria-label="Toggle navigation" onclick="toggleNav()">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-
-        <div class="nav-links">
-          <a href="index.html">Home</a>
-          <a href="about.html">About</a>
-          <a href="courses.html">Courses</a>
-          <a href="contact.html">Contact</a>
-        </div>
-      </nav>
-
-      <div id="mobileNav" class="nav-links-mobile">
-        <a href="index.html" onclick="toggleNav()">Home</a>
-        <a href="about.html" onclick="toggleNav()">About</a>
-        <a href="courses.html" onclick="toggleNav()">Courses</a>
-        <a href="contact.html" onclick="toggleNav()">Contact</a>
-      </div>
-    </div>
-  </header>
-
-  <!-- Hero -->
-  <main id="home">
-    <section class="hero">
-      <div class="container hero-grid">
-        <div>
-          <div class="hero-kicker">Online Biology & Science Tuition</div>
-          <h1 class="hero-title">
-            Expert tutoring for <span class="hero-highlight">IGCSE, GCSE, A Level Biology</span> & KS3 Science.
-          </h1>
-          <p class="hero-subtitle">
-            Personalised, online lessons with an experienced teacher who has taught in leading independent schools in both Sydney and London.
-          </p>
-          <div class="hero-buttons">
-            <a href="contact.html" class="btn-primary">Enquire about availability</a>
-            <a href="courses.html" class="btn-secondary">View courses</a>
+<header>
+  <div class="container">
+    <nav class="nav">
+      <div class="logo-text">
+        <a href="index.html" style="display:flex; align-items:center; gap:0.75rem;">
+          <div class="logo-box">SR</div>
+          <div>
+            <div class="logo-title">Sophie Ren Tutoring</div>
+            <div class="logo-subtitle">Online</div>
           </div>
-          <p class="hero-meta">
-            Sessions are <span>online</span> · Individual & small group · Group discounts available
-          </p>
-        </div>
+        </a>
       </div>
-    </section>
 
-    <!-- Quick Links to Other Pages -->
-    <section style="padding: 3rem 0; background: #f9f9f9;">
-      <div class="container">
-        <div class="section-header">
-          <div class="section-kicker">Get Started</div>
-          <h2 class="section-title">Explore My Services</h2>
-        </div>
+      <button class="nav-toggle" onclick="toggleNav()">
+        <span></span><span></span><span></span>
+      </button>
 
-        <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25rem;">
-          <a href="about.html" style="text-decoration: none;">
-            <div class="course-card" style="cursor: pointer; transition: transform 0.2s, box-shadow 0.2s;">
-              <div>
-                <h3 class="course-title">About Me</h3>
-                <p class="course-body">
-                  Learn about my teaching experience, qualifications, and approach to tutoring.
-                </p>
-              </div>
-              <div class="course-footer">
-                Plus student testimonials →
-              </div>
-            </div>
-          </a>
-
-          <a href="courses.html" style="text-decoration: none;">
-            <div class="course-card" style="cursor: pointer; transition: transform 0.2s, box-shadow 0.2s;">
-              <div>
-                <h3 class="course-title">Courses</h3>
-                <p class="course-body">
-                  IGCSE, GCSE, A Level Biology, and KS3 Science. Learn how online tutoring works.
-                </p>
-              </div>
-              <div class="course-footer">
-                Explore all courses →
-              </div>
-            </div>
-          </a>
-
-          <a href="contact.html" style="text-decoration: none;">
-            <div class="course-card" style="cursor: pointer; transition: transform 0.2s, box-shadow 0.2s;">
-              <div>
-                <h3 class="course-title">Contact</h3>
-                <p class="course-body">
-                  Get in touch to discuss your needs, rates, and availability. Send an enquiry form.
-                </p>
-              </div>
-              <div class="course-footer">
-                Contact me →
-              </div>
-            </div>
-          </a>
-        </div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="contact.html">Contact</a>
       </div>
-    </section>
-  </main>
+    </nav>
 
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <div class="footer-inner">
-        <div>© 2026 Sophie Ren Tutoring. All rights reserved.</div>
-        <div class="footer-links">
-          <a href="about.html">About</a>
-          <a href="courses.html">Courses</a>
-          <a href="contact.html">Contact</a>
-        </div>
-      </div>
+    <div id="mobileNav" class="nav-links-mobile">
+      <a href="index.html">Home</a>
+      <a href="contact.html">Contact</a>
     </div>
-  </footer>
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container hero-grid">
+
+    <div class="hero-content-box">
+
+      <div class="hero-kicker">Hi, I’m Sophie!</div>
+
+      <h1 class="hero-title">Sophie Ren Tutoring</h1>
+
+      <p class="hero-subtitle">
+        I love working 1:1 with pupils and seeing those “lightbulb moments” happen — when things finally click and confidence really starts to grow.
+      </p>
+
+      <p class="hero-subtitle">
+        I’ve taught in leading schools in both Sydney and London, including as a Head of Year, and I take a very pastoral approach — focusing on how each student learns best.
+      </p>
+
+      <p class="hero-subtitle">
+        I work with pupils of all abilities, supporting them to grow in confidence and achieve strong outcomes, whether that’s building a solid foundation or aiming for top grades — always in a way that feels manageable and clear.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="contact.html" class="btn-primary">Enquire</a>
+      </div>
+
+    </div>
+
+    <!-- IMAGES -->
+    <div class="hero-images">
+      <img src="img1.png" class="hero-img img1 active">
+      <img src="img2.png" class="hero-img img2">
+      <img src="img3.png" class="hero-img img3">
+    </div>
+
+  </div>
+</section>
+
+<section class="courses-section">
+  <div class="container">
+
+    <div class="courses-grid">
+
+      <div class="course-card">
+        <h3>IGCSE Biology</h3>
+      </div>
+
+      <div class="course-card">
+        <h3>GCSE Biology</h3>
+      </div>
+
+      <div class="course-card">
+        <h3>A Level Biology</h3>
+      </div>
+
+      <div class="course-card">
+        <h3>KS3 Science</h3>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials-section">
+  <div class="container">
+    <h2 style="text-align:center;">What pupils say</h2>
+
+    <div class="testimonials-grid">
+
+      <div class="testimonial-card">
+        “I absolutely loved our biology lessons!! Ms. Ren explains everything so clearly and always takes time to make sure I really understand — it made such a difference!”
+        <div class="testimonial-name">Year 11 student</div>
+      </div>
+
+      <div class="testimonial-card">
+        “Ms. Ren is super supportive and patient — nothing ever feels rushed, and things just *click* in her lessons. I actually started enjoying biology!”
+        <div class="testimonial-name">Year 10 student</div>
+      </div>
+
+      <div class="testimonial-card">
+        “Our lessons completely changed how I felt about biology — I ended up choosing it at university because I loved it so much. Thank you Ms. Ren!!”
+        <div class="testimonial-name">Year 13 student</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- IMAGE ROTATION -->
+<script>
+  let currentIndex = 0;
+  const images = document.querySelectorAll('.hero-img');
+
+  function rotateImages() {
+    images[currentIndex].classList.remove('active');
+    currentIndex = (currentIndex + 1) % images.length;
+    images[currentIndex].classList.add('active');
+  }
+
+  setInterval(rotateImages, 3000);
+</script>
 
 </body>
 </html>
