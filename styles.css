@@ -667,3 +667,138 @@ footer {
     justify-content: center;
   }
 }
+.hero-content-box {
+  animation: fadeInUp 0.8s ease;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* HERO VISUAL UPGRADE */
+.hero {
+  background: linear-gradient(135deg, #eef7ee, #f6fbf6);
+  position: relative;
+}
+
+.hero-content-box {
+  background: white;
+  padding: 2rem;
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  position: relative;
+}
+
+/* playful soft blob effect */
+.hero-content-box::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  width: 80px;
+  height: 80px;
+  background: #dff4df;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.hero-kicker {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--green-dark);
+}
+
+/* testimonial */
+.hero-testimonial {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #444;
+  background: #f1faf1;
+  padding: 0.8rem 1rem;
+  border-radius: 12px;
+  border-left: 4px solid var(--green-primary);
+}
+
+/* IMAGE AREA */
+.hero-images {
+  position: relative;
+  height: 420px;
+  border-radius: 18px;
+  background: #eaf6ea;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-img {
+  position: absolute;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+/* FIX FOR IMAGE 2 */
+.contain-img {
+  object-fit: contain !important;
+}
+
+.hero-img.active {
+  opacity: 1;
+}
+
+/* RESULTS STRIP */
+.results-strip {
+  padding: 2.5rem 0;
+  background: #f0f8f0;
+}
+
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  text-align: center;
+}
+
+.result-card {
+  background: white;
+  padding: 1.2rem;
+  border-radius: 14px;
+  border: 1px solid var(--border-soft);
+}
+
+.result-number {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--green-dark);
+}
+
+.result-text {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+/* subtle animation */
+.hero-content-box {
+  animation: fadeInUp 0.8s ease;
+}
+
+@keyframes fadeInUp {
+  from {opacity: 0; transform: translateY(15px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+/* mobile */
+@media (max-width: 768px) {
+  .results-grid {
+    grid-template-columns: 1fr;
+  }
+}
