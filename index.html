@@ -245,8 +245,17 @@
 
 </main>
 
-<!-- IMAGE ROTATION -->
 <script>
+  function toggleNav() {
+    document.getElementById("mobileNav").classList.toggle("show");
+  }
+
+  document.querySelectorAll("#mobileNav a").forEach(link => {
+    link.addEventListener("click", () => {
+        document.getElementById("mobileNav").classList.remove("show");
+    });
+  });
+
   let currentIndex = 0;
   const images = document.querySelectorAll('.hero-img');
 
